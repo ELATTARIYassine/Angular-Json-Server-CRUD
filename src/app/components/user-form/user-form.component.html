@@ -1,1 +1,13 @@
-<p>user-form works!</p>
+<div class="container">
+    <form (ngSubmit)="processForm()">
+        <div class="form-group">
+            <label for="exampleInputEmail1">First name</label>
+            <input type="text" name="fname" [(ngModel)]="user.fname" class="form-control" id="exampleInputEmail1" placeholder="Enter first name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Last name</label>
+            <input type="text" name="lname" [(ngModel)]="user.lname" class="form-control" id="exampleInputPassword1" placeholder="Enter last name">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>

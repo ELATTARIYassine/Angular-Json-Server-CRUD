@@ -1,7 +1,13 @@
 {
-    "users": [{
-        "id": 1,
-        "fname": "erwin",
-        "lname": "smith"
-    }]
+  "users": [
+    {
+      "fname": "a",
+      "lname": "aa",
+      "id": 1
+    },
+    {
+      "fname": "ssss",
+      "id": 2
+    }
+  ]
 }

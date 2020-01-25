@@ -13,17 +13,17 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let user of users">
-                        <th scope="row">1</th>
+                        <th scope="row">*</th>
                         <td>{{ user.fname }}</td>
                         <td>{{ user.fname }}</td>
                         <td>
-                            <button class="btn btn-danger">Delete</button>&nbsp;
-                            <button class="btn btn-primary">Edit</button>
+                            <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>&nbsp;
+                            <button class="btn btn-primary" (click)="updateUser(user)">Edit</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <button class="btn btn-primary">Add user</button>
+            <button class="btn btn-primary" (click)="newUser()">Add user</button>
         </div>
         <div class="col-md-2"></div>
     </div>

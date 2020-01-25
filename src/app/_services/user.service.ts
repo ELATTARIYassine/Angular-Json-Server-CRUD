@@ -7,6 +7,7 @@ import { User } from '../Model/user';
 export class UserService {
 
   private baseUrl :string = "http://localhost:3000/users";
+  private user:User;
   constructor(private http: HttpClient) { }
 
   findAll(){
@@ -19,7 +20,13 @@ export class UserService {
     return this.http.post<User>(this.baseUrl, user);
   }
   updateUser(user: User){
-    return this.http.put<User>(this.baseUrl, user);
+    return this.http.put<User>(this.baseUrl + `/${user.id}`, user);
+  }
+  setter(user: User){
+    this.user = user;
+  }
+  getter(){
+    return this.user;
   }
 
 }
