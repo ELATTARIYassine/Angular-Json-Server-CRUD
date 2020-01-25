@@ -15,7 +15,7 @@
                     <tr *ngFor="let user of users">
                         <th scope="row">*</th>
                         <td>{{ user.fname }}</td>
-                        <td>{{ user.fname }}</td>
+                        <td>{{ user.lname }}</td>
                         <td>
                             <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>&nbsp;
                             <button class="btn btn-primary" (click)="updateUser(user)">Edit</button>
