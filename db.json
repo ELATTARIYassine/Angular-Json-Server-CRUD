@@ -1,0 +1,7 @@
+{
+    "users": [{
+        "id": 1,
+        "fname": "erwin",
+        "lname": "smith"
+    }]
+}
