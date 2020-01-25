@@ -12,8 +12,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let user of users">
-                        <th scope="row">*</th>
+                    <tr *ngFor="let user of users; let i = index;">
+                        <th scope="row">{{i+1}}</th>
                         <td>{{ user.fname }}</td>
                         <td>{{ user.lname }}</td>
                         <td>

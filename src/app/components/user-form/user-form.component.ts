@@ -11,15 +11,23 @@ import { Router } from '@angular/router';
 export class UserFormComponent implements OnInit {
 
   private user: User;
+  onAddOrUpdate: boolean = true;
 
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.user = this.userService.getter();
+    if(this.user.id == undefined)
+    {
+      this.onAddOrUpdate = true; 
+    }else{
+      this.onAddOrUpdate = false;
+    }
   }
   processForm(){
     console.log(this.user);
     if(this.user.id == undefined){
+      this.onAddOrUpdate = true;
       this.userService.createUser(this.user).subscribe(res=>{
         console.log(res);
         this.router.navigate(['/']);
@@ -27,6 +35,7 @@ export class UserFormComponent implements OnInit {
     }
     else
     {
+      this.onAddOrUpdate = false;
       this.userService.updateUser(this.user).subscribe(res=>{
         this.router.navigate(['/']);
         console.log(res);
